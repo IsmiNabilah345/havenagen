@@ -29,7 +29,7 @@
             <a class="nav-link active" href="<?= base_url('landing'); ?>">Beranda</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#menu">Menu</a>
+            <a class="nav-link" href="<?= base_url('menu'); ?>">Menu</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="<?= base_url('hubungikami'); ?>">Hubungi Kami</a>
