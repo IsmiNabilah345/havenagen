@@ -20,7 +20,7 @@
             <input type="text" class="form-control" id="harga" name="harga" required>
         </div>
         <div class="mb-3">
-            <label for="foto_menu" class="form-label">Foto Menu</label>
+            <label for="foto_menu" class="form-label"> Foto Menu</label>
             <input type="text" class="form-control" id="foto_menu" name="foto_menu" required>
         </div>
         <button type="submit" class="btn btn-primary">Tambah Menu</button>
