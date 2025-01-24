@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jan 18, 2025 at 02:12 AM
+-- Generation Time: Jan 24, 2025 at 09:04 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -104,7 +104,46 @@ INSERT INTO `auth_logins` (`id`, `ip_address`, `email`, `user_id`, `date`, `succ
 (5, '::1', 'nabilaimina@gmail.com', 3, '2025-01-18 01:07:04', 1),
 (6, '::1', 'nabilaimina@gmail.com', 3, '2025-01-18 01:10:28', 1),
 (7, '::1', 'bilaa', NULL, '2025-01-18 01:16:53', 0),
-(8, '::1', 'nabilaimina@gmail.com', 3, '2025-01-18 01:17:01', 1);
+(8, '::1', 'nabilaimina@gmail.com', 3, '2025-01-18 01:17:01', 1),
+(9, '::1', 'nabilaimina@gmail.com', 3, '2025-01-22 02:51:35', 1),
+(10, '::1', 'nabilaimina@gmail.com', 3, '2025-01-22 02:54:12', 1),
+(11, '::1', 'nabilaimina@gmail.com', 3, '2025-01-22 03:44:05', 1),
+(12, '::1', 'nabilaimina@gmail.com', 3, '2025-01-22 07:57:21', 1),
+(13, '::1', 'bilaa', NULL, '2025-01-22 07:58:13', 0),
+(14, '::1', 'bilaa', NULL, '2025-01-22 07:58:20', 0),
+(15, '::1', 'nabilaimina@gmail.com', 3, '2025-01-22 07:58:37', 1),
+(16, '::1', 'bilaa', NULL, '2025-01-22 14:06:39', 0),
+(17, '::1', 'nabilaimina@gmail.com', 3, '2025-01-22 14:06:54', 1),
+(18, '::1', 'nabilaimina@gmail.com', 3, '2025-01-22 14:49:13', 1),
+(19, '::1', 'nabilaimina@gmail.com', 3, '2025-01-22 14:50:43', 1),
+(20, '::1', 'nabilaimina@gmail.com', 3, '2025-01-22 15:00:16', 1),
+(21, '::1', 'nabilaimina@gmail.com', 3, '2025-01-22 15:00:54', 1),
+(22, '::1', 'nabilaimina@gmail.com', 3, '2025-01-22 15:11:50', 1),
+(23, '::1', 'nabilaimina@gmail.com', 3, '2025-01-22 15:16:56', 1),
+(24, '::1', 'nabilaimina@gmail.com', 3, '2025-01-22 15:18:29', 1),
+(25, '::1', 'nabilaimina@gmail.com', 3, '2025-01-22 15:24:10', 1),
+(26, '::1', 'nabilaimina@gmail.com', 3, '2025-01-22 15:25:17', 1),
+(27, '::1', 'nabilaimina@gmail.com', 3, '2025-01-22 15:26:46', 1),
+(28, '::1', 'nabilaimina@gmail.com', 3, '2025-01-23 03:19:30', 1),
+(29, '::1', 'nabilaimina@gmail.com', 3, '2025-01-23 03:20:04', 1),
+(30, '::1', 'nabilaimina@gmail.com', 3, '2025-01-23 03:39:15', 1),
+(31, '::1', 'nabilaimina@gmail.com', 3, '2025-01-23 03:39:44', 1),
+(32, '::1', 'nabilaimina@gmail.com', 3, '2025-01-23 03:44:58', 1),
+(33, '::1', 'nabilaimina@gmail.com', 3, '2025-01-23 03:53:14', 1),
+(34, '::1', 'nabilaimina@gmail.com', 3, '2025-01-23 13:13:06', 1),
+(35, '::1', 'nabilaimina@gmail.com', 3, '2025-01-23 13:13:49', 1),
+(36, '::1', 'nabilaimina@gmail.com', 3, '2025-01-23 13:18:49', 1),
+(37, '::1', 'nabilaimina@gmail.com', 3, '2025-01-23 13:48:21', 1),
+(38, '::1', 'nabilaimina@gmail.com', 3, '2025-01-23 14:31:14', 1),
+(39, '::1', 'nabilaimina@gmail.com', 3, '2025-01-23 14:44:26', 1),
+(40, '::1', 'nabilaimina@gmail.com', 3, '2025-01-23 14:45:05', 1),
+(41, '::1', 'nabilaimina@gmail.com', 3, '2025-01-23 14:45:41', 1),
+(42, '::1', 'nabilaimina@gmail.com', 3, '2025-01-23 15:42:12', 1),
+(43, '::1', 'nabilaimina@gmail.com', 3, '2025-01-24 02:50:22', 1),
+(44, '::1', 'nabilaimina@gmail.com', 3, '2025-01-24 04:04:55', 1),
+(45, '::1', 'bilaa', NULL, '2025-01-24 07:47:04', 0),
+(46, '::1', 'nabilaimina@gmail.com', 3, '2025-01-24 07:47:12', 1),
+(47, '::1', 'nabilaimina@gmail.com', 3, '2025-01-24 09:03:14', 1);
 
 -- --------------------------------------------------------
 
@@ -192,27 +231,71 @@ INSERT INTO `migrations` (`id`, `version`, `class`, `group`, `namespace`, `time`
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_matkul`
+-- Table structure for table `tb_menu`
 --
 
-CREATE TABLE `tb_matkul` (
-  `id_matkul` int NOT NULL,
-  `nama_matkul` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `keterangan` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `kategori` varchar(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL,
-  `sks` int NOT NULL,
-  `gambar` text CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL
+CREATE TABLE `tb_menu` (
+  `id_menu` int NOT NULL,
+  `nama_menu` varchar(256) NOT NULL,
+  `jenis` int NOT NULL,
+  `harga` int NOT NULL,
+  `foto_menu` varchar(256) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
--- Dumping data for table `tb_matkul`
+-- Dumping data for table `tb_menu`
 --
 
-INSERT INTO `tb_matkul` (`id_matkul`, `nama_matkul`, `keterangan`, `kategori`, `sks`, `gambar`) VALUES
-(1, 'Pemrograman 1 (Web)', 'Matakuliah inti Semester 1', 'Programming', 4, 'buku.jpg'),
-(2, 'Web Services', 'Matakuliah inti', 'Programming', 4, 'buku.jpg'),
-(3, 'Algoritma', 'Logika Pemrograman', 'Programming', 4, 'buku.jpg'),
-(4, 'Basis Data', 'Matakuliah Inti', 'Databasae', 4, 'buku.jpg');
+INSERT INTO `tb_menu` (`id_menu`, `nama_menu`, `jenis`, `harga`, `foto_menu`) VALUES
+(1, 'Nagen Orange', 1, 15000, 'nagen-oranje.WEBP'),
+(2, 'Cofee Latte', 1, 16000, 'cofee-latte.WEBP'),
+(3, 'Green Thai Tea', 1, 17000, 'green-thai-tea.WEBP'),
+(5, 'Honey Lemon', 1, 15000, 'honey-lemon.WEBP'),
+(6, 'Iced Choko', 1, 15000, 'iced-choko.WEBP'),
+(7, 'Mocha', 1, 17000, 'mocha.WEBP'),
+(9, 'Naturan Green', 1, 15000, 'naturan-green.WEBP'),
+(10, 'Ovaltine', 1, 18000, 'ovaltine2.WEBP'),
+(11, 'Royal Mixer', 1, 18000, 'royal-mixer.WEBP'),
+(12, 'Thai Milk', 1, 12000, 'thai-milk.WEBP'),
+(13, 'Thai', 1, 12000, 'thai.WEBP'),
+(14, 'Ultimate Mango', 1, 17000, 'ultimate mango.WEBP'),
+(15, 'Ultimate Mango Large', 1, 18000, 'ultimate-mango-(large).WEBP'),
+(16, 'French Fries', 2, 15000, 'french-fries.WEBP'),
+(17, 'Kentang Goreng dan Sosis', 2, 17000, 'snack.jpg'),
+(18, 'Roti Bakar', 2, 12000, 'snack2.jpg'),
+(19, 'Roti Kupi', 2, 6000, 'Rotikupi.WEBP'),
+(20, 'Mie Tek-tek', 3, 17000, 'mie-tek-tek.WEBP'),
+(21, 'Dismum', 3, 17000, 'Dimsum.WEBP'),
+(22, 'Nasgor', 3, 16000, 'nophoto.png');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tb_transaksi`
+--
+
+CREATE TABLE `tb_transaksi` (
+  `id_transaksi` int NOT NULL,
+  `id_menu` int NOT NULL,
+  `nama_menu` varchar(256) NOT NULL,
+  `foto_menu` varchar(255) NOT NULL,
+  `jumlah` int NOT NULL,
+  `total_harga` decimal(10,2) NOT NULL,
+  `tgl_transaksi` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `harga` decimal(10,2) NOT NULL,
+  `nama_pengirim` varchar(255) NOT NULL,
+  `nomor_rekening` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+--
+-- Dumping data for table `tb_transaksi`
+--
+
+INSERT INTO `tb_transaksi` (`id_transaksi`, `id_menu`, `nama_menu`, `foto_menu`, `jumlah`, `total_harga`, `tgl_transaksi`, `harga`, `nama_pengirim`, `nomor_rekening`) VALUES
+(7, 14, 'Ultimate Mango', 'Img/ultimate mango.WEBP', 1, 23000.00, '2025-01-23 19:29:02', 17000.00, 'bila', '56565656'),
+(8, 19, 'Roti Kupi', 'Img/Rotikupi.WEBP', 1, 23000.00, '2025-01-23 19:29:02', 6000.00, 'bila', '56565656'),
+(9, 17, 'Kentang Goreng dan Sosis', 'Img/snack.jpg', 1, 34000.00, '2025-01-23 21:04:29', 17000.00, 'mina', '56565656'),
+(10, 21, 'Dismum', 'Img/Dimsum.WEBP', 1, 34000.00, '2025-01-23 21:04:29', 17000.00, 'mina', '56565656');
 
 -- --------------------------------------------------------
 
@@ -321,10 +404,18 @@ ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tb_matkul`
+-- Indexes for table `tb_menu`
 --
-ALTER TABLE `tb_matkul`
-  ADD PRIMARY KEY (`id_matkul`);
+ALTER TABLE `tb_menu`
+  ADD PRIMARY KEY (`id_menu`);
+
+--
+-- Indexes for table `tb_transaksi`
+--
+ALTER TABLE `tb_transaksi`
+  ADD PRIMARY KEY (`id_transaksi`),
+  ADD KEY `menu` (`id_menu`),
+  ADD KEY `id_menu` (`id_menu`);
 
 --
 -- Indexes for table `users`
@@ -354,7 +445,7 @@ ALTER TABLE `auth_groups`
 -- AUTO_INCREMENT for table `auth_logins`
 --
 ALTER TABLE `auth_logins`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
 -- AUTO_INCREMENT for table `auth_permissions`
@@ -381,10 +472,16 @@ ALTER TABLE `migrations`
   MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
--- AUTO_INCREMENT for table `tb_matkul`
+-- AUTO_INCREMENT for table `tb_menu`
 --
-ALTER TABLE `tb_matkul`
-  MODIFY `id_matkul` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+ALTER TABLE `tb_menu`
+  MODIFY `id_menu` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+
+--
+-- AUTO_INCREMENT for table `tb_transaksi`
+--
+ALTER TABLE `tb_transaksi`
+  MODIFY `id_transaksi` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `users`
@@ -422,6 +519,12 @@ ALTER TABLE `auth_tokens`
 ALTER TABLE `auth_users_permissions`
   ADD CONSTRAINT `auth_users_permissions_permission_id_foreign` FOREIGN KEY (`permission_id`) REFERENCES `auth_permissions` (`id`) ON DELETE CASCADE,
   ADD CONSTRAINT `auth_users_permissions_user_id_foreign` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE;
+
+--
+-- Constraints for table `tb_transaksi`
+--
+ALTER TABLE `tb_transaksi`
+  ADD CONSTRAINT `tb_transaksi_ibfk_1` FOREIGN KEY (`id_menu`) REFERENCES `tb_menu` (`id_menu`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

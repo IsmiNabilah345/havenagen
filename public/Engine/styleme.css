@@ -47,32 +47,51 @@ body {
     color: #685752;
 }
 
-span{
+span {
     font-weight: 600;
 }
 
+.container,
+img {
+    border-radius: 9px;
+}
+
 .Tombol {
-    background-color: #4CAF50; /* Warna hijau */
-    color: white; /* Warna teks */
-    border: none; /* Menghapus border */
-    border-radius: 5px; /* Membuat sudut membulat */
-    padding: 10px 20px; /* Jarak dalam tombol */
-    font-size: 16px; /* Ukuran font */
-    cursor: pointer; /* Menampilkan kursor pointer */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan */
-    transition: all 0.3s ease; /* Efek transisi */
-  }
+    background-color: #4CAF50;
+    /* Warna hijau */
+    color: white;
+    /* Warna teks */
+    border: none;
+    /* Menghapus border */
+    border-radius: 5px;
+    /* Membuat sudut membulat */
+    padding: 10px 20px;
+    /* Jarak dalam tombol */
+    font-size: 16px;
+    /* Ukuran font */
+    cursor: pointer;
+    /* Menampilkan kursor pointer */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    /* Menambahkan bayangan */
+    transition: all 0.3s ease;
+    /* Efek transisi */
+}
 
-  .Tombol:hover {
-    background-color: #45a049; /* Warna hijau lebih gelap saat hover */
-    transform: scale(1.05); /* Efek memperbesar */
-  }
+.Tombol:hover {
+    background-color: #45a049;
+    /* Warna hijau lebih gelap saat hover */
+    transform: scale(1.05);
+    /* Efek memperbesar */
+}
 
-  .Tombol:active {
-    background-color: #3e8e41; /* Warna saat diklik */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Bayangan lebih kecil */
-    transform: scale(0.95); /* Efek mengecil */
-  }
+.Tombol:active {
+    background-color: #3e8e41;
+    /* Warna saat diklik */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* Bayangan lebih kecil */
+    transform: scale(0.95);
+    /* Efek mengecil */
+}
 
 /* Footer */
 footer {

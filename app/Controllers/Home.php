@@ -2,15 +2,16 @@
 
 namespace App\Controllers;
 
-use App\Models\ModelMatkul;
+use App\Models\ModelMenu;
 
 class Home extends BaseController
 {
-    protected $modelmatkul;
+    protected $modelmenu;
     public function __construct() 
     {
-        $this->modelmatkul = new ModelMatkul();
+        $this->modelmenu = new ModelMenu();
     }
+
 
     public function index()
     {
@@ -19,17 +20,48 @@ class Home extends BaseController
 
     public function landing()
     {
+
+        // if (session()->get('isLoggedIn')) {
+        //     return redirect()->to('/index');
+        // }
+
         return view('tampilan/landing');
     }
 
     public function minuman()
     {
-        return view('tampilan/minuman');
+        $minum = $this->modelmenu->getByJenisSatu();
+
+        $data = [
+            "tittle" => 'Menu',
+            "minum" => $minum
+        ];
+
+        return view('tampilan/minuman', $data);
     }
 
     public function makanan()
     {
-        return view('tampilan/makanan');
+        $makan = $this->modelmenu->getByJenisTiga();
+
+        $data = [
+            "tittle" => 'Menu',
+            "makan" => $makan
+        ];
+
+        return view('tampilan/makanan', $data);
+    }
+
+    public function cemilan()
+    {
+        $cemil = $this->modelmenu->getByJenisDua();
+
+        $data = [
+            "tittle" => 'Menu',
+            "cemil" => $cemil
+        ];
+
+        return view('tampilan/cemilan', $data);
     }
 
     public function hubungikami()
@@ -37,8 +69,25 @@ class Home extends BaseController
         return view('tampilan/hubungikami');
     }
 
-    public function cemilan()
+    public function isimenu()
     {
-        return view('tampilan/cemilan');
+        $isimenu = $this->modelmenu->findAll();
+
+        $data = [
+            "tittle" => 'Menu',
+            "isimenu" => $isimenu
+        ];
+
+        return view('tampilan/menu', $data);
     }
+
+    public function keranjang()
+    {
+        return view('tampilan/keranjang');
+    }
+    public function beli()
+    {
+        return view('tampilan/beli');
+    }
+
 }

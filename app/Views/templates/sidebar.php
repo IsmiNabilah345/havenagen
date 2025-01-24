@@ -13,7 +13,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="<?= base_url('index'); ?>">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Dashboard</span></a>
             </li>
@@ -21,20 +21,7 @@
             <!-- Divider -->
             <hr class="sidebar-divider">
 
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Interface
-            </div>
 
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                <i class="fa-solid fa-user"></i>
-                    <span>Nama User</span></a>
-            </li>
-
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
 
             <!-- Heading -->
             <div class="sidebar-heading">
@@ -43,20 +30,27 @@
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="charts.html">
+                <a class="nav-link" href="<?= base_url('listmenu'); ?>">
+                <i class="fa-solid fa-utensils"></i>
+                    <span>Menu</span></a>
+            </li>
+
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+                <a class="nav-link" href="<?= base_url('tmakanan'); ?>">
                 <i class="fa-solid fa-utensils"></i>
                     <span>Makanan</span></a>
             </li>
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="<?= base_url('tminuman'); ?>">
                 <i class="fa-solid fa-wine-glass"></i>
                     <span>Minuman</span></a>
             </li>
 
             <li class="nav-item">
-                <a class="nav-link" href="tables.html">
+                <a class="nav-link" href="<?= base_url('tcemilan'); ?>">
                     <i class="fa-solid fa-cookie-bite"></i>
                     <span>Cemilan</span></a>
             </li>

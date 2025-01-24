@@ -12,6 +12,7 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="Engine/styleMin.css">
+  <link rel="icon" href="Img/Logo2.png" type="image/x-icon"/>
 </head>
 
 <body>
@@ -28,7 +29,7 @@
                         <a class="nav-link" href="<?= base_url('landing'); ?>">Beranda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="<?= base_url('landing'); ?>">Menu</a>
+                        <a class="nav-link active" href="<?= base_url('menu'); ?>">Menu</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?= base_url('hubungikami'); ?>">Hubungi Kami</a>
@@ -58,13 +59,15 @@
 
         <div class="container text-center">
             <div class="row row-cols-2 row-cols-lg-4 g-2 g-lg-3">
+                <?php foreach ($minum as $m) : ?>
                 <div class="col">
-                    <span class="border-bottom"><img src="../Img/nagen-oranje.webp" alt="" class="img-fluid"></span>
+                    <span class="border-bottom"><img src="Img/<?= $m['foto_menu']; ?>" alt="" class="img-fluid"></span>
                     <br><br>
-                    <h4>Nagen Orange</h4>
-                    <h5>Rp:000.000</h5>
+                    <h4><?= $m['nama_menu']; ?></h4>
+                    <h5>Rp:<?= $m['harga']; ?></h5>
                 </div>
-                <div class="col">
+                <?php endforeach; ?>
+                <!-- <div class="col">
                     <span class="border-bottom"><img src="../Img/cofee-latte.webp" alt="" class="img-fluid"></span>
                     <br><br>
                     <h4>Cofee Latte</h4>
@@ -148,8 +151,8 @@
                     <br><br>
                     <h4>Ultimate Mango Large</h4>
                     <h5>Rp:000.000</h5>
-                </div>
-            </div>
+                </div>-->
+            </div> 
         </div>
     </section>
 
